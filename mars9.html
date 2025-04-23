@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mars9</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: linear-gradient(135deg, #fff 0%, #ffe4f0 100%);
+      --box-bg: rgba(255, 255, 255, 0.4);
+      --accent: #ff69b4;
+      --shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+      --font-main: 'Quicksand', sans-serif;
+      --font-logo: 'Orbitron', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-main);
+      background: var(--main-bg);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://svgshare.com/i/13rS.svg'); /* Soft stars */
+      background-size: cover;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-family: var(--font-logo);
+      font-size: 60px;
+      color: #111;
+      text-shadow: 2px 2px 0 #ff69b4, 4px 4px 0 #fff;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 28px;
+      color: #000;
+      font-family: var(--font-main);
+    }
+
+    .bio {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+
+    .pluhhhh {
+      margin: 30px auto;
+      background: #ff69b4;
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 50px;
+      width: fit-content;
+      font-weight: bold;
+      font-size: 18px;
+      animation: glow 2s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+      50% { box-shadow: 0 0 25px #ff1493, 0 0 40px #ff69b4; }
+    }
+
+    section {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+    }
+
+    .box {
+      background: var(--box-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      border: 2px solid #fff;
+    }
+
+    .link {
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: #fff;
+      border: 2px solid #ff69b4;
+      color: #ff69b4;
+      border-radius: 12px;
+      font-weight: bold;
+      z-index: 999;
+    }
+
+    @media screen and (max-width: 600px) {
+      .logo {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <button class="toggle-btn" onclick="alert('Dark Mode Coming Soon!')">Light Mode</button>
+
+  <header>
+    <div class="logo">Mars9 <span>99</span></div>
+    <div class="bio">be authentic, be you</div>
+    <div class="pluhhhh">Pluhhhh</div>
+  </header>
+
+  <section>
+    <div class="box">Now Playing Visualizer (Coming Soon)</div>
+    <div class="box">YouTube / Spotify Embed (Drop your sound here)</div>
+    <div class="box">Newsletter Signup / Fan Contact</div>
+    <div class="box">Upcoming Shows / Drops Section</div>
+    <div class="box">Merch Preview</div>
+    <div class="box">Follow on <a class="link" href="#" target="_blank">X - @Mars9</a></div>
+  </section>
+</body>
+</html>
